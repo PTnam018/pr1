@@ -16,3 +16,45 @@ export function login(email, password) {
         password: password
     })
 }
+
+export function createPost(title, content, image) {
+    return axios.post(`${API_BASE_URL}/createPost`, null, {
+        params: {
+            title: title,
+            content: content,
+            image: image,
+        }
+    });
+}
+
+
+export function getAllPost() {
+    return axios.get(`${API_BASE_URL}/getAllPost`);
+}
+
+export function getPostByPostId(postId) {
+    return axios.post(`${API_BASE_URL}/getPostByPostId`, null, {
+        params: {
+            postId: postId
+        }
+    });
+}
+
+export function updatePost(title, content, image, postId) {
+    return axios.post(`${API_BASE_URL}/updatePost`, null, {
+        params: {
+            title: title,
+            content: content,
+            image: image,
+            postId: postId
+        }
+    });
+}
+
+export function deletePost(postId) {
+    return axios.post(`${API_BASE_URL}/deletePost`, null, {
+        params: {
+            postId: postId
+        }
+    });
+}

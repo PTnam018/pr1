@@ -13,9 +13,9 @@ const router = express.Router()
 
 router.post('/createPost', createPost)
 router.get('/getAllPost', getAllPost)
-router.get('/getPostByPostId/:postId', getPostByPostId)
-router.post('/updatePost/:title/:content/:image/:postId', updatePost)
-router.post('/deletePost/:postId', deletePost)
+router.get('/getPostByPostId', getPostByPostId)
+router.post('/updatePost', updatePost)
+router.post('/deletePost', deletePost)
 
 
 export default router
